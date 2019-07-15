@@ -123,7 +123,7 @@
             a. Resolver este problema com um for. <br>
             b. Resolver este problema com um while. <br>
             c. Resolver este problema com um do/while. <br>
- </p>
+            </p>
             <div>
                 <?php 
                 $array = [];
@@ -137,6 +137,39 @@
                             break;
                         }
                     }
+                ?>
+            </div>
+        </li>
+
+        <li>
+            <p>8. Utilizando a função “Range”(http://php.net/manual/en/function.range.php), criar um intervalo de letras (de a até o), imprimir um valor que diga “Na posição [index], está o valor [value]”, em que [value] será substituído por cada valor do array e [index] representa o índice.</p>
+            <pre>
+                <?php 
+                    $letras = range('a','o');
+                    foreach ($letras as $posicao => $letra) {
+                        echo "Na posição $posicao, está o valor $letra <br>";
+                    }
+                ?>
+            </pre>
+        </li>
+
+        <li>
+            <p>9. Definir uma variável $mascote que seja um array associativo <br>
+                a. No índice animal, deve dizer que animal é. <br>
+                b. No índice idade, deve dizer a idade. <br>
+                c. No índice altura, deve dizer a altura. <br>
+                d. No índice nome, deve dizer o nome</p>
+            <div>
+                <?php 
+                    $mascote = [
+                        'animal' => 'raposa',
+                        'idade' => 4,
+                        'altura' => 40,
+                        'nome' => 'fox'
+                    ];
+                    echo('<pre>');
+                    print_r($mascote);
+                    echo('</pre>');
                 ?>
             </div>
         </li>
