@@ -173,6 +173,28 @@
                 ?>
             </div>
         </li>
+
+        <li>
+            <p>10. Percorrer os valores do array com um foreach que imprima (por exemplo): <br>
+                animal: cachorro <br>
+                idade: 5 <br>
+                altura: 0,60 <br>
+                nome: Sonic </p>
+            <div>
+                <?php 
+                    $mascote = [
+                        'animal' => 'raposa',
+                        'idade' => 4,
+                        'altura' => 40,
+                        'nome' => 'fox'
+                    ];
+                    foreach ($mascote as $posicao => $value) {
+                        echo $posicao . ' : ' . $value . '<br>';
+                    }
+                    echo('</pre>');
+                ?>
+            </div>
+        </li>
     </ol>
 </body>
 </html>
