@@ -44,27 +44,38 @@
         <li>
             <p> 4. Utilizando um while, fazer um programa que lance uma moeda (escolhendo um número aleatório que pode ser 0 ou 1) até tirar 5 vezes cara (o número 1). Ao terminar, imprimir o número de lançamentos da moeda até tirar 5 vezes cara. </p>
             <div>
-                <table>
-                    <?php 
+                <?php 
                     
-                    $cont = 0;
-                    $cont2 = 0;
-                    while ($cont != 5) {
-                        $cont2++;
-                        $resultado = mt_rand(0,1);
-                        if ($resultado == 1){
-                            $cont++;
-                        }
-                        else{
-                            $cont = 0;
-                        }
+                $cont = 0;
+                $cont2 = 0;
+                while ($cont != 5) {
+                    $cont2++;
+                    $resultado = mt_rand(0,1);
+                    if ($resultado == 1){
+                        $cont++;
                     }
+                    else{
+                        $cont = 0;
+                    }
+                }
+                echo "lançou a moeda " . $cont2;
+                ?>
+            </div>
+        </li>
 
-                    echo "lançou a moeda " . $cont2;
-
+        <li>
+            <p> 5. Utilizando um do/while, realizar um programa que lance a moeda até tirar cara (o número 1). No final do programa, imprimir quantos lançamentos da moeda forem necessários </p>
+            <div>
+                <?php 
+                    
+                $cont = 0;
                 
-                    ?>
-                </table>
+                do {
+                    $resultado = mt_rand(0,1);
+                    $cont++;
+                } while ($resultado != 1);
+                echo $cont . "veze(s)";
+                ?>
             </div>
         </li>
     </ol>
