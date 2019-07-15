@@ -45,13 +45,25 @@
             <p> 4. Utilizando um while, fazer um programa que lance uma moeda (escolhendo um número aleatório que pode ser 0 ou 1) até tirar 5 vezes cara (o número 1). Ao terminar, imprimir o número de lançamentos da moeda até tirar 5 vezes cara. </p>
             <div>
                 <table>
-                    <?php for($i = 0; $i <= 10; $i++){
-                        echo('<tr>');
-                        echo(' <td>');
-                        echo (2 . " x " . $i . " = " .(2*$i));
-                        echo(' </td>');
-                        echo('</tr>');
-                    } ?>
+                    <?php 
+                    
+                    $cont = 0;
+                    $cont2 = 0;
+                    while ($cont != 5) {
+                        $cont2++;
+                        $resultado = mt_rand(0,1);
+                        if ($resultado == 1){
+                            $cont++;
+                        }
+                        else{
+                            $cont = 0;
+                        }
+                    }
+
+                    echo "lançou a moeda " . $cont2;
+
+                
+                    ?>
                 </table>
             </div>
         </li>
