@@ -20,9 +20,9 @@
         <li>
             <p> 2. Modificar o exercício anterior para que, em vez de parar no número 100, pare em um número gerado aleatoriamente entre 0 e 100. </p>
             <div>
-                <?php
-                    echo rand(1,100); 
-                ?>
+                <?php for($i = 1; $i <= mt_rand(1,100); $i++){
+                    echo $i . " ";
+                } ?>
             </div>
         </li>
     </ol>
